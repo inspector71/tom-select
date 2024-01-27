@@ -31,8 +31,7 @@ document.getElementById('change-input').addEventListener('click',function(evt){
 	evt.stopPropagation();
 
 	input.value = 'new value';
-	var evt = document.createEvent('HTMLEvents');
-	evt.initEvent('change', false, true);
+	var evt = new Event("change");
 	input.dispatchEvent(evt);
 });
 {% endset %}
